@@ -1,0 +1,17 @@
+/* Basic reset and layout */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body,#scene { height: 100%; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; overflow: hidden; background: #87ceeb; }
+#scene { display: block; width: 100vw; height: 100vh; }
+
+#ui { position: absolute; left: 12px; top: 12px; z-index: 20; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+#ui h1 { font-size: 18px; margin-bottom: 8px; }
+.controls { display:flex; gap:8px; align-items:center; background: rgba(0,0,0,0.25); padding:8px; border-radius:6px; }
+.controls label { font-size:13px; color: #fff; display:flex; gap:6px; align-items:center; }
+.hint { margin-top:6px; font-size:12px; color: #eee; opacity:0.85; }
+
+/* Night mode darker overlay adjustments */
+.nightBody { background: linear-gradient(#0b2341, #1e3a5f); }
+
+/* Small responsive tweaks */
+@media (max-width:600px){ #ui { left:8px; top:8px; } .controls{flex-direction:column; align-items:flex-start;} }
